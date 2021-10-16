@@ -25,6 +25,10 @@ public abstract class Piece {
         if(newY < 0 || 7 < newY){
             return false;
         }
+        if(xPos == newX && yPos == newY){ // If the new move is the same as the old placement, illegal
+            return false;
+        }
+
         return true;
     }
 
