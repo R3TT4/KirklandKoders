@@ -14,7 +14,7 @@ public class King extends Piece {
             return false;
         }
 
-        // valid when x is same or y is same because that means straight line
+        // checks to see if the new move is more than 1 block away from curr
         if (newX > currX + 1 || newY > currY + 1 || newY < currY - 1 || newX < currX - 1) {
             validMove = false;
         }
