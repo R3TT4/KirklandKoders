@@ -1,2 +1,3 @@
-# KirklandKoders
-Add to readme guys please im not gonna do it because im lazy but please
+# KirklandKoders: Chess 2
+## Chess with a twist
+
