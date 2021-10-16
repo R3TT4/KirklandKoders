@@ -15,7 +15,7 @@ public abstract class Piece {
     }
 
     // validates moves
-    public abstract boolean validateMove();
+    public abstract boolean validateMove(int currX, int currY, int newX, int newY);
 
     // returns object name
     @Override
