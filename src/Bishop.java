@@ -3,15 +3,15 @@ public class Bishop extends Piece {
     // dvc
     public Bishop() {
         super("Bishop");
-        setxPos(0);
-        setyPos(0);
+//        setxPos(0);
+//        setyPos(0);
     }
 
     // evc
-    public Bishop(int xPos, int yPos, int userNum) {
+    public Bishop(/*int xPos, int yPos,*/ int userNum) {
         super("Bishop");
-        setxPos(xPos);
-        setyPos(yPos);
+//        setxPos(xPos);
+//        setyPos(yPos);
         setUserNum(userNum);
     }
 
