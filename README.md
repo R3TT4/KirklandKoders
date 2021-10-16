@@ -16,3 +16,9 @@
     - Instead of moving a piece, a player may **place any captured piece as their own anywhere on the board**
         - **EXCEPTION:** There may not be more than one pawn per player in a column
         - If a pawn is placed within the opponents first three ranks, it **DOES NOT** receive king mobility until it moves from its intial placement
+
+  
+    
+
+- Example board  
+![image](https://user-images.githubusercontent.com/62561761/137601189-9ec41b62-2c69-4c89-8872-9f9bdcb3e303.png)
