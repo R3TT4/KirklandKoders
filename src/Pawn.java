@@ -5,6 +5,7 @@ public class Pawn extends Piece {
         super("Pawn");
     }
 
+    // Validates move for pawn
     @Override
     public boolean validateMove(int currX, int currY, int newX, int newY) {
         if(!onBoard(newX, newY)){
