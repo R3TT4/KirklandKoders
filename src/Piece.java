@@ -15,9 +15,7 @@ public abstract class Piece {
     }
 
     // validates moves
-    public boolean validateMove(){
-        return true;
-    }
+    public abstract boolean validateMove();
 
     // returns object name
     @Override
@@ -25,6 +23,7 @@ public abstract class Piece {
         return name;
     }
 
+    // ### Getters and Setters ###
     public String getName() {
         return name;
     }
