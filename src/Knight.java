@@ -2,7 +2,7 @@ public class Knight extends Piece {
 
     // Pawn constructor
     public Knight(int userNum) {
-        super("Knight");
+        super("N");
         setUserNum(userNum);
     }
 

@@ -6,7 +6,7 @@ public class Queen extends Piece
 
     public Queen (int userNum)
     {
-        super("Queen"); //name of piece
+        super("Q"); //name of piece
         setUserNum(userNum);
     }
 

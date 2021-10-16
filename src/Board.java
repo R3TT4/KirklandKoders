@@ -8,6 +8,14 @@ public  class Board {
     public Board(){
         Player player0 = new Player(0);
         Player player1 = new Player(1);
+
+        //set all spots on board null
+        for(int i = 0; i < board.length; i++){
+            for(int j = 0; j < board.length; j++){
+                board[i][j] = null;
+            }
+        }
+
     }
 
     // Method to move a piece
@@ -36,6 +44,36 @@ public  class Board {
         TODO: Figure out if going to actually use gui or stick with command line
         TODO: more stuff i guess lmao
     */
+
+    @Override
+    public String toString() {
+        String board_string = "";
+        int level = 9;
+
+        for (int i = 9; i >= 0; i--) {
+            board_string += level + " ";
+            for (int j = 0; j <= 9; j++) {
+
+                if (board[i][j] == null) {
+                    board_string += "[ ] ";
+                }
+
+                // CHANGE TO DO THE PIECE CHAR, NOT JUST R
+                else {
+                    board_string += "[R] ";
+                }
+            }
+            board_string += "\n";
+            level += -1;
+        }
+
+        board_string += "   ";
+        for (int j = 0; j <= 9; j++) {
+            board_string += j + "   ";
+        }
+
+        return board_string;
+    }
 
 }
 

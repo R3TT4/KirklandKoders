@@ -1,7 +1,7 @@
 public class King extends Piece {
 
     public King(int userNum) {
-        super("King");
+        super("K");
         setUserNum(userNum);
     }
 

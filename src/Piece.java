@@ -1,6 +1,6 @@
 public abstract class Piece {
 
-    // Name of the pieces
+    // Piece Icon
     private String name;
 
     // X position of piece

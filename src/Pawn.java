@@ -2,7 +2,7 @@ public class Pawn extends Piece {
 
     // Pawn constructor
     public Pawn(int userNum) {
-        super("Pawn");
+        super("P");
         setUserNum(userNum);
     }
 

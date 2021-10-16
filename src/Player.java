@@ -6,6 +6,9 @@ public class Player {
     // Keeps track of pieces taken
     private List<Piece> takenPieces = new ArrayList<>();
 
+    // Keeps track of the pieces of the player
+    private List<Piece> userPieces = new ArrayList<>();
+
     // Player constructor
     public Player(int userNum) {
         // instantiates all the pieces
@@ -27,6 +30,35 @@ public class Player {
         Knight knight2 = new Knight(userNum);
         Queen queen = new Queen(userNum);
         King king = new King(userNum);
+
+        // Add the pieces to the user
+        addToUser(pawn1);
+        addToUser(pawn2);
+        addToUser(pawn3);
+        addToUser(pawn4);
+        addToUser(pawn5);
+        addToUser(pawn6);
+        addToUser(pawn7);
+        addToUser(pawn8);
+        addToUser(pawn9);
+        addToUser(pawn10);
+        addToUser(rook1);
+        addToUser(rook2);
+        addToUser(bishop1);
+        addToUser(bishop2);
+        addToUser(knight1);
+        addToUser(knight2);
+        addToUser(queen);
+        addToUser(king);
     }
 
+    // Adds a piece to the taken list
+    public void addToTaken(Piece piece){
+        takenPieces.add(piece);
+    }
+
+    // Instantiates the list of pieces that the user already has
+    public void addToUser(Piece piece){
+        userPieces.add(piece);
+    }
 }
