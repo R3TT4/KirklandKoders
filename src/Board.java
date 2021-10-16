@@ -19,8 +19,8 @@ public class Board {
             }
         }
 
-        rook = new Rook();
-        board[4][2] = rook;
+//        rook = new Rook();
+//        board[4][2] = rook;
     }
 
     // first makes sure that move is valid then completes move

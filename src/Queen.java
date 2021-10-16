@@ -4,9 +4,10 @@ public class Queen extends Piece
 {
     boolean fairMove = false;
 
-    public Queen ()
+    public Queen (int userNum)
     {
         super("Queen"); //name of piece
+        setUserNum(userNum);
     }
 
     @Override

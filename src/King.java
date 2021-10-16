@@ -1,7 +1,8 @@
 public class King extends Piece {
 
-    public King() {
+    public King(int userNum) {
         super("King");
+        setUserNum(userNum);
     }
 
     // validates move for a rook

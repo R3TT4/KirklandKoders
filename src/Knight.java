@@ -1,8 +1,9 @@
 public class Knight extends Piece {
 
     // Pawn constructor
-    public Knight() {
+    public Knight(int userNum) {
         super("Knight");
+        setUserNum(userNum);
     }
 
     // Validates move for pawn

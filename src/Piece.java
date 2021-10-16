@@ -9,6 +9,9 @@ public abstract class Piece {
     // Y position of piece
     private int yPos;
 
+    // Player ownership over piece
+    private int userNum;
+
     // Constructor
     public Piece(String name) {
         this.name = name;
@@ -61,5 +64,13 @@ public abstract class Piece {
 
     public void setyPos(int yPos) {
         this.yPos = yPos;
+    }
+
+    public int getUserNum() {
+        return userNum;
+    }
+
+    public void setUserNum(int userNum) {
+        this.userNum = userNum;
     }
 }
