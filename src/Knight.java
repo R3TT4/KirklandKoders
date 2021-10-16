@@ -1,8 +1,8 @@
-public class Pawn extends Piece {
+public class Knight extends Piece {
 
     // Pawn constructor
-    public Pawn() {
-        super("Pawn");
+    public Knight() {
+        super("Knight");
     }
 
     // Validates move for pawn
@@ -13,7 +13,7 @@ public class Pawn extends Piece {
         }
 
         //must move linearly
-        if(newX == currX && (newY == (currY + 1))){
+        if(newX == currX && (newY == (currY + 1) || newY == (currY - 1))){
             return true;
         }
         return false;
