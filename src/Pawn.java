@@ -12,14 +12,10 @@ public class Pawn extends Piece {
             return false;
         }
 
-        if(newX == (currX + 1) || newX == (currX - 1)){
+        //must move linearly
+        if(newX == currX && (newY == (currY + 1) || newY == (currY - 1))){
             return true;
         }
-
-        if(newY == (currY + 1) || newY == (currY - 1)){
-            return true;
-        }
-
         return false;
     }
 
