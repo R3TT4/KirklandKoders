@@ -1,7 +1,7 @@
-public class Rook extends Piece {
+public class King extends Piece {
 
-    public Rook() {
-        super("Rook");
+    public King() {
+        super("King");
     }
 
     // validates move for a rook
@@ -15,7 +15,10 @@ public class Rook extends Piece {
         }
 
         // valid when x is same or y is same because that means straight line
-        if (currX == newX || currY == newY) {
+        if (newX > currX + 1 || newY > currY + 1 || newY < currY - 1 || newX < currX - 1) {
+            validMove = false;
+        }
+        else {
             validMove = true;
         }
 
