@@ -17,6 +17,17 @@ public abstract class Piece {
     // validates moves
     public abstract boolean validateMove(int currX, int currY, int newX, int newY);
 
+    // Checks if new move is on the board
+    public boolean onBoard(int newX, int newY){
+        if(newX < 0 || 7 < newX){
+            return false;
+        }
+        if(newY < 0 || 7 < newY){
+            return false;
+        }
+        return true;
+    }
+
     // returns object name
     @Override
     public String toString() {
