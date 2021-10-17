@@ -2,7 +2,7 @@
 ### Rules:
 
 - The movement of Chess 2 pieces is the same as traditional chess pieces
-    - Pawn can move 1 space forward
+    - Pawn can only move 1 space forward (No two space moves on the first turn)
     - Rook can freely move any spaces vertically OR horizontally
     - Bishop can freely move any spaces diagonally
     - Knight can move 2 spaces vertically and 1 space horizontally OR 1 space vertically and 2 spaces horizontally
