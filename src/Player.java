@@ -43,13 +43,13 @@ public class Player {
         addToUser(pawn9);
         addToUser(pawn10);
         addToUser(rook1);
-        addToUser(rook2);
-        addToUser(bishop1);
-        addToUser(bishop2);
         addToUser(knight1);
-        addToUser(knight2);
+        addToUser(bishop1);
         addToUser(queen);
         addToUser(king);
+        addToUser(bishop2);
+        addToUser(knight2);
+        addToUser(rook2);
     }
 
     // Adds a piece to the taken list
@@ -60,5 +60,13 @@ public class Player {
     // Instantiates the list of pieces that the user already has
     public void addToUser(Piece piece){
         userPieces.add(piece);
+    }
+
+    public List<Piece> getTakenPieces() {
+        return takenPieces;
+    }
+
+    public List<Piece> getUserPieces() {
+        return userPieces;
     }
 }

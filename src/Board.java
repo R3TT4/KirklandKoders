@@ -4,11 +4,11 @@ public  class Board {
 
     private Piece[][] board = new Piece[10][10];
 
+    Player player1 = new Player(1);
+    Player player2 = new Player(2);
+
     // Constructor
     public Board(){
-        Player player0 = new Player(0);
-        Player player1 = new Player(1);
-
         //set all spots on board null
         for(int i = 0; i < board.length; i++){
             for(int j = 0; j < board.length; j++){
@@ -37,6 +37,32 @@ public  class Board {
         // need to do
     }
 
+    // Fill the board for the start of the game
+    public void fillBoard(){
+        // Fill player 1 side first
+        int elementTracker = 0; //keeps track of the element in the array list to iterate from halfway through
+        for (int i = 0; i < board.length; i++){
+            board[8][i] = player1.getUserPieces().get(i);
+            elementTracker++;
+        }
+        for (int i = 1; i < board.length - 1; i++){
+            board[9][i] = player1.getUserPieces().get(elementTracker);
+            elementTracker++;
+        }
+
+        // Fill player 2 pieces
+        elementTracker = 0;
+        for (int i = 0; i < board.length; i++){
+            board[1][i] = player2.getUserPieces().get(i);
+            elementTracker++;
+        }
+        for (int i = 1; i < board.length - 1; i++){
+            board[0][i] = player2.getUserPieces().get(elementTracker);
+            elementTracker++;
+        }
+
+    }
+
     /*  TODO: takePiece (take piece if there is an opponent piece in the new space)
         TODO: make sure pieces cant overlap
         TODO: inCheck (see if king is in check by looking at surrounding pieces and their movement paths)
@@ -60,7 +86,7 @@ public  class Board {
 
                 // CHANGE TO DO THE PIECE CHAR, NOT JUST R
                 else {
-                    board_string += "[R] ";
+                    board_string += "[" + board[i][j].toString() + "] ";
                 }
             }
             board_string += "\n";
@@ -76,6 +102,8 @@ public  class Board {
     }
 
 }
+
+
 
 
 /*
