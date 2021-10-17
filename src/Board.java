@@ -16,7 +16,6 @@ public  class Board {
             }
         }
         fillBoard();
-
     }
 
     // Method to move a piece
@@ -114,6 +113,25 @@ public  class Board {
         return board_string;
     }
 
+    // Method to print board with player particularities
+    public void printBoard(){
+        String pieceString1 = "";
+        for(int k = 0; k < player1.getTakenPieces().size(); k++){
+            pieceString1 += "(" + player1.getTakenPieces().get(k).toString() + ") ";
+        }
+
+        String pieceString2 = "";
+        for(int k = 0; k < player2.getTakenPieces().size(); k++){
+            pieceString2 += "(" + player2.getTakenPieces().get(k).toString() + ") ";
+        }
+        System.out.println("Player 1");
+        System.out.println("Taken Pieces: " + pieceString1);
+        System.out.println("-----------------------------------------");
+        System.out.println(this.toString());
+        System.out.println("-----------------------------------------");
+        System.out.println("Player 2");
+        System.out.println("Taken Pieces: " + pieceString2);
+    }
 }
 
 

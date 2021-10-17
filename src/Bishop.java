@@ -1,10 +1,8 @@
 public class Bishop extends Piece {
 
     // evc
-    public Bishop(/*int xPos, int yPos,*/ int userNum) {
+    public Bishop(int userNum) {
         super("B");
-//        setxPos(xPos);
-//        setyPos(yPos);
         setUserNum(userNum);
     }
 
