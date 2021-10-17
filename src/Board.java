@@ -15,6 +15,7 @@ public  class Board {
                 board[i][j] = null;
             }
         }
+        fillBoard();
 
     }
 
@@ -86,7 +87,19 @@ public  class Board {
 
                 // CHANGE TO DO THE PIECE CHAR, NOT JUST R
                 else {
-                    board_string += "[" + board[i][j].toString() + "] ";
+                    // Prints player 1 style if player 1 piece
+                    for(int k = 0; k < player1.getUserPieces().size(); k++){
+                        if(board[i][j] == player1.getUserPieces().get(k)){
+                            board_string += "(" + board[i][j].toString() + ") ";
+                        }
+                    }
+                    // Prints player 2 style is player 2 piece
+                    for(int k = 0; k < player2.getUserPieces().size(); k++){
+                        if(board[i][j] == player2.getUserPieces().get(k)){
+                            board_string += "{" + board[i][j].toString() + "} ";
+                        }
+                    }
+
                 }
             }
             board_string += "\n";
