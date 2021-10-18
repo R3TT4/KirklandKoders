@@ -3,6 +3,7 @@ public class Main {
         Board board = new Board();
 
         board.printBoard();
+        board.move(1);
     }
 
 

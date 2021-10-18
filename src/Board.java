@@ -1,4 +1,8 @@
+// whenever x is talked about that is the column position, y is the row position
+// so board[y][x] since rows are first before colummns
+
 import java.util.Arrays;
+import java.util.Scanner;
 
 public  class Board {
 
@@ -131,5 +135,45 @@ public  class Board {
         System.out.println("-----------------------------------------");
         System.out.println("Player 2");
         System.out.println("Taken Pieces: " + pieceString2);
+    }
+
+    // param userTurn gives the int relating to which user's turn it is
+    // right now it just checks to make sure the piece thats gets selected is the player's
+    public void move(int userTurn) {
+        Player playerTurn = null;
+        String playerString = "";
+        if (userTurn == 1) {
+            playerTurn = player1;
+            playerString = "Player 1";
+        }
+
+        else if (userTurn == 2) {
+            playerTurn = player2;
+            playerString = "Player 2";
+        }
+
+        boolean validPiece = false;
+        System.out.println("It is " + playerString + "'s turn.");
+        Scanner kb = new Scanner(System.in); // used to get user input from terminal
+
+        while (validPiece == false) {
+            System.out.println("Please enter the location of which piece you would like to move.");
+            System.out.println("Enter the location as (Row)(Col) with no spaces. ex. 25");
+            int pieceLoc = kb.nextInt();
+            int pieceRow = pieceLoc / 10;
+            int pieceCol = pieceLoc % 10;
+
+            if (pieceLoc < 0 || pieceLoc > 99) {
+                continue; // invalid location
+            }
+
+            Piece chosenPiece = board[pieceRow][pieceCol];
+            if (chosenPiece == null || chosenPiece.getUserNum() != userTurn) {
+                continue; // invalid location
+            }
+
+            validPiece = true;
+            System.out.println(chosenPiece.toString());
+        }
     }
 }
